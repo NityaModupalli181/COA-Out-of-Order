@@ -432,7 +432,7 @@ def print_summary_table(data, mamba=None):
 
 
 # ── Main ──────────────────────────────────────────────────────
-if _name_ == "_main_":
+if __name__ == "__main__":
     data  = load()
     mamba = load_mamba()
 
