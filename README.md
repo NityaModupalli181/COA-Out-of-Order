@@ -15,7 +15,7 @@ model comparison experiment.
 
 ### Token Throughput by Method
 
-![Token Throughput by Method](plot_throughput.png)
+![Token Throughput by Method](speculative_decoding/plot_throughput.png)
 
 *Bar chart showing tokens/second for each decoder configuration at sequence lengths n=50, 100, 200.
 Full Decoder (KV-Cache + Adaptive K) consistently achieves the highest throughput.*
@@ -24,7 +24,7 @@ Full Decoder (KV-Cache + Adaptive K) consistently achieves the highest throughpu
 
 ### Sequence Length vs Token Throughput
 
-![Sequence Length vs Token Throughput](plot_throughput_line.png)
+![Sequence Length vs Token Throughput](speculative_decoding/plot_throughput_line.png)
 
 *Line chart comparing all methods as sequence length grows. Speculative methods
 scale better than the target-only baseline. The dashed pink line shows Mamba-130m
@@ -34,7 +34,7 @@ draft model throughput.*
 
 ### Speedup over Baseline
 
-![Speedup over Baseline](plot_speedup.png)
+![Speedup over Baseline](speculative_decoding/plot_speedup.png)
 
 *Speedup multiplier (×) compared to running GPT-2 XL alone. The gold bars show
 the theoretical upper bound from the performance model. Pink bars show Mamba-130m
@@ -44,7 +44,7 @@ draft model speedup.*
 
 ### Acceptance Rate and Speedup vs Speculation Depth k
 
-![Acceptance Rate vs k](plot_alpha_sensitivity.png)
+![Acceptance Rate vs k](speculative_decoding/plot_alpha_sensitivity.png)
 
 *Dual-axis chart showing how acceptance rate α and overall speedup change as
 speculation depth k increases. Dashed pink lines show Mamba-130m reference values.*
@@ -53,7 +53,7 @@ speculation depth k increases. Dashed pink lines show Mamba-130m reference value
 
 ### Mamba-130m (SSM) vs GPT-2 Small (Transformer) Draft Model
 
-![Mamba Comparison](plot_mamba_comparison.png)
+![Mamba Comparison](speculative_decoding/plot_mamba_comparison.png)
 
 *Dedicated three-panel comparison: token throughput, speedup, and acceptance rate α
 vs cost ratio β for both draft architectures. Validates the SSM-as-drafter hypothesis
@@ -235,35 +235,7 @@ Replaces GPT-2 Small drafter with Mamba-130m. Key SSM advantages:
 
 ---
 
-## Architecture Diagram
-
-
-Your Prompt
-    │
-    ▼
-┌─────────────────────────────────────────────────────┐
-│                    models.py                        │
-│   GPT-2 Small (0.27 GB) + GPT-2 XL (3.23 GB)      │
-│   Total: 3.5 GB on GTX 1650 Ti                     │
-└────────────────────┬────────────────────────────────┘
-                     │
-         ┌───────────┴───────────┐
-         ▼                       ▼
-┌─────────────────┐   ┌──────────────────────────────┐
-│  Draft Phase    │   │       Verify Phase            │
-│  GPT-2 Small   │   │       GPT-2 XL               │
-│  Generates k=4 │──▶│  Checks all 4 in ONE pass    │
-│  tokens fast   │   │  Accept / Reject each token  │
-└─────────────────┘   └──────────────────────────────┘
-                                 │
-                    ┌────────────┴────────────┐
-                    ▼                         ▼
-             Accepted tokens            Rejected token
-             added to output            → resample from
-                                          target distribution
-                                          → restart draft
-
-Configurations tested:
+## Configurations tested:
   base_speculative  →  above loop, fixed k=4
   speculative_kv    →  above + KV-cache (no recompute)
   full_decoder      →  above + KV-cache + adaptive k
@@ -272,8 +244,6 @@ Configurations tested:
 
 
 ---
-
-## Troubleshooting
 
 ### CUDA not available
 bash
