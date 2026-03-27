@@ -1,0 +1,206 @@
+{
+  "beta": 0.06366527183000208,
+  "configs": {
+    "target_only": {
+      "50": {
+        "tps": 17.959577667018824,
+        "acceptance_rate": 1.0,
+        "rollbacks": 0.0,
+        "k": 0.0
+      },
+      "100": {
+        "tps": 19.879701672987572,
+        "acceptance_rate": 1.0,
+        "rollbacks": 0.0,
+        "k": 0.0
+      },
+      "200": {
+        "tps": 20.474873404128818,
+        "acceptance_rate": 1.0,
+        "rollbacks": 0.0,
+        "k": 0.0
+      }
+    },
+    "draft_only": {
+      "50": {
+        "tps": 81.43068023189774,
+        "acceptance_rate": 1.0,
+        "rollbacks": 0.0,
+        "k": 0.0
+      },
+      "100": {
+        "tps": 85.05190989911814,
+        "acceptance_rate": 1.0,
+        "rollbacks": 0.0,
+        "k": 0.0
+      },
+      "200": {
+        "tps": 86.89686135625334,
+        "acceptance_rate": 1.0,
+        "rollbacks": 0.0,
+        "k": 0.0
+      }
+    },
+    "base_speculative": {
+      "50": {
+        "text": " 3, and the sixth digit is the reciprocal of the first, so the first prize is 3\u00bc.\n\nThe second prize is 3\u00bc, and the third the third, so the second prize is 3\u00be.\n\nThe third",
+        "tokens": 51.666666666666664,
+        "time": 14.864661333333364,
+        "tps": 3.4857998156493077,
+        "acceptance_rate": 0.7185283687943262,
+        "rounds": 17.666666666666668,
+        "rollbacks": 13.333333333333334,
+        "k": 4.0
+      },
+      "100": {
+        "text": " 3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651328230664709384460955058223172535940812848111745028410270193852110555964462294895493038196442881097566593344612847564823",
+        "tokens": 100.0,
+        "time": 94.13046673333368,
+        "tps": 1.3790945773707088,
+        "acceptance_rate": 0.2790912790912791,
+        "rounds": 74.33333333333333,
+        "rollbacks": 70.66666666666667,
+        "k": 4.0
+      },
+      "200": {
+        "text": " 56,767,215, which is greater than 5,000,000,000.\n\nThe squared part of pi is 1,000,000,000.\n\nThe square root of 2 is 10.\n\nThe square root of 18 is 11.\n\nThe square root of 31 is 12.\n\nThe square root of 60 is 31.\n\nThe square root of 60 is equal to 1,000,000,000.\n\nThe square root of 60 is equal to 1,000,000,000u.\n\nThe square root of 60 is equal to 1,000,000,000,000.\n\nThe square root of 60 is equal to 1,000,000,000,000,000.\n\nThe square root of 60 is equal to 1,000,000,000,000,000,000.\n\nThe square root of 60 is equal to 1,000,000,000,000,000,000",
+        "tokens": 200.66666666666666,
+        "time": 98.59349423333333,
+        "tps": 2.037641548941236,
+        "acceptance_rate": 0.8618262972307918,
+        "rounds": 55.0,
+        "rollbacks": 23.333333333333332,
+        "k": 4.0
+      }
+    },
+    "speculative_kv": {
+      "50": {
+        "text": " circumference, its diameter and last, also circumference is diameter since diameter as radius length one addition 16285\nExample multiply two-IDuse like example TheNonProof pi (=\nExample(All digitsImportant*314489627314",
+        "tokens": 49.0,
+        "time": 32.44682009999966,
+        "tps": 1.5116222733278828,
+        "acceptance_rate": 0.06709219858156028,
+        "rounds": 45.666666666666664,
+        "rollbacks": 45.666666666666664,
+        "k": 4.0
+      },
+      "100": {
+        "text": " imaginary and second third and beginning fourth mut split successive additional matching digits\nall valid Calculator[\nComBtSplitMatshiftClassADDcmpCase 62000290 60069 LargeuLargeDecbMathSStzinot Integsq28L8 ConstBtQResUleft Plans New822133163H03 EvalFloatIs best yeele continued expand answer Completed\nYou obviously by following procedure do following sequence\nFirst thishe And imaginary scratchWeek ext",
+        "tokens": 100.0,
+        "time": 67.69254349999999,
+        "tps": 1.4788839452951466,
+        "acceptance_rate": 0.05333333333333334,
+        "rounds": 94.66666666666667,
+        "rollbacks": 94.66666666666667,
+        "k": 4.0
+      },
+      "200": {
+        "text": " denomin worked three or second for sex multiply dot Initially there I 17200 Ot Americans or beginning our the drummer soon clocks One the the 20 220 Birth Men by end 1970 for the time two peanut, ye 15 36 9199 (\nNS to six only first can They often from average also In area dividing 24 Any several sound See term a stay period up @\nIJ Bee Vote We we such padded Pe also first by 1960 HP as Seventh travel a the MelaniaVi ls pe Silentmr It 85 She for rate Ang Japanese Germany INIS too \"\nHe linguistic because the report open spatial Access UI is certificate doesn it but sc code Philcom ^\nby All (\nThe\nThe\nBat Uni Preennial meta- the the books Tar of similar the the opposite F :Tor framed\nBat District Women its the the the, theing the the cream daily PM S Dan or the u Joan collateral Carroll et",
+        "tokens": 195.66666666666666,
+        "time": 131.0423879000003,
+        "tps": 1.4961560315249127,
+        "acceptance_rate": 0.07076648841354723,
+        "rounds": 182.0,
+        "rollbacks": 182.0,
+        "k": 4.0
+      }
+    },
+    "full_decoder": {
+      "50": {
+        "text": " base g The\ntheThis the the the the letters The\nThe\nGoing solve cube\nSince the legs Sol y Use cube SS Note the the who ar l The\nS\nc How solve cube arL Use cube SL\nThe\nmat",
+        "tokens": 50.333333333333336,
+        "time": 30.73919993333372,
+        "tps": 1.640184642646452,
+        "acceptance_rate": 0.12549019607843137,
+        "rounds": 44.0,
+        "rollbacks": 44.0,
+        "k_final": 3.0,
+        "k_avg": 3.022251543973464
+      },
+      "100": {
+        "text": " circumference area showing ratio irregular and demo\npi For Herald in Welsh blog Ism Example Itypeco martrans G2iiiff and symbols ID unclear MvQ Sam C Gem O Other User O sp By Laws\n\nI Do equations grow they not handle To fire increases volume Parents par Places Kimber Oh log Just En Tag Magnetneddy lifting bill powerlifepower Tony best spacecom A Carter A blue In House age man immun ang adv among con employ mant library seed The\nListmac themselves",
+        "tokens": 100.0,
+        "time": 67.91859493333322,
+        "tps": 1.4729968710787693,
+        "acceptance_rate": 0.03333333333333333,
+        "rounds": 96.66666666666667,
+        "rollbacks": 96.66666666666667,
+        "k_final": 3.0,
+        "k_avg": 3.0102434658073753
+      },
+      "200": {
+        "text": " same just the.\n64765 Prot 691277250016848\nTheIS648lzipexedlldllOdlldlldllsysdlldlldlldll (So no64765NETSdlldlldlldlldll MoreWith great IScrete greatfast sure Link261dlldll So big may th g A Real By the you 32324772\nnvdlldlldllsyndllSdlldllSo before.So yes\n32 The36040408dlldllEndTheAre the toSam8doknow howeverII So 3211600144 Calling284SoOr Still very very strangely noleISo howhmstheredlldll immediately veryvery IHS234\n327764..32401 Not Solid 8401366 You NameTheApparently32YetRoy3484750 So XTDiewav use xaso it Its4131Real1232And thatWhat sSy Dollar 3332672ThatWho\"32105 So IPIt Any",
+        "tokens": 200.0,
+        "time": 135.56723753333304,
+        "tps": 1.4757873516804902,
+        "acceptance_rate": 0.041666666666666664,
+        "rounds": 191.66666666666666,
+        "rollbacks": 191.66666666666666,
+        "k_final": 3.0,
+        "k_avg": 3.005191826918773
+      }
+    }
+  },
+  "alpha_sensitivity": {
+    "2": {
+      "text": " rho, the second is sigma, and the third is epsilon.\n\nThe first magnitudes of pi are rho, the second is sigma, and the third is epsilon.\n\nThe first magnitudes of pi are rho, the second is sigma, and the third is epsilon.\n\nThe first magnitudes of pi are rho, the second is sigma, and the third is epsilon.\n\nThe first magn",
+      "tokens": 100.66666666666667,
+      "time": 45.43672810000013,
+      "tps": 2.248726989146911,
+      "acceptance_rate": 0.7639632107023412,
+      "rounds": 43.333333333333336,
+      "rollbacks": 18.333333333333332,
+      "k": 2.0
+    },
+    "3": {
+      "text": " 3.1415926535897932384626433832795028841971693993751. The second digits are 3.14159265358979318238930987654321009948095820974943215.\n\nThe first two digits are equal to 10.\n\nThe second two digits are equal to 70.\n\nThe third two digits are equal to 720.\n\nThe fourth two digits are equal to 27745.\n\nThe",
+      "tokens": 101.33333333333333,
+      "time": 45.24375809999947,
+      "tps": 2.2748522489613525,
+      "acceptance_rate": 0.684608601275268,
+      "rounds": 43.333333333333336,
+      "rollbacks": 27.333333333333332,
+      "k": 3.0
+    },
+    "4": {
+      "text": " 10, and the second digits are 3. The first digit of the first digit of the second digit.\n\nThe first digit of 9 is 9.\n\nThe first digit of OutPerMute is -1.\n\nThe first full step of the first move is -1.\n\nThe first full step of the second move is -4.\n\nThe first full step of the third move is -6.\n\nThe first full step of the final move is -8.",
+      "tokens": 100.33333333333333,
+      "time": 87.6215967666667,
+      "tps": 1.5448133858453525,
+      "acceptance_rate": 0.32277834525025534,
+      "rounds": 71.0,
+      "rollbacks": 66.33333333333333,
+      "k": 4.0
+    },
+    "5": {
+      "text": " 3.14159265358979323846, and a calculator works out to be 3.14159265358979323846.\n\nThe first digit of Pi is 3.14159265358979323846.\n\nCap...\n\nThe private key is a hexadecimal number.\n\nThe private key is a period.\n\nThe private key is a string of digits.\n\nThe private key is chosen randomly.\n\nThe private key is a string of digits",
+      "tokens": 103.0,
+      "time": 39.456434233333006,
+      "tps": 2.6383516500058755,
+      "acceptance_rate": 0.7645285333459152,
+      "rounds": 30.666666666666668,
+      "rollbacks": 22.333333333333332,
+      "k": 5.0
+    },
+    "6": {
+      "text": " 3, and the second digit is 2.\n\nThe second digit of pi is 3.\n\nThe third digit of pi is 3.\n\nThe fourth digit of pi is 3.\n\nThe fifth digit of pi is 3.\n\nThe sixth digit of pi is 3.\n\nThe seventh digit of pi is 3.\n\nThe eighth digit of pi is 3.\n\nThe ninth digit of pi is 3.\n\nThe tenth digit of pi is 3.\n\nThe ele",
+      "tokens": 101.33333333333333,
+      "time": 60.946409733332985,
+      "tps": 3.1656191558998494,
+      "acceptance_rate": 0.6458426966292135,
+      "rounds": 43.333333333333336,
+      "rollbacks": 35.0,
+      "k": 6.0
+    },
+    "8": {
+      "text": " said to be the \"triple digit\" number because they are the product of five primes. The remaining digits are the \"decimal\" number because they are the product of three primes.\n\nThe reason for this is that the number of possible iterations of pi is finite. The number of possible values of any given number includes two and three.\n\nThe digits of pi are the product of five primes.\n\nThe digits of pi are the product of three primes.\n",
+      "tokens": 101.0,
+      "time": 35.90240766666648,
+      "tps": 3.1669642570054584,
+      "acceptance_rate": 0.7866311297673209,
+      "rounds": 27.0,
+      "rollbacks": 20.333333333333332,
+      "k": 8.0
+    }
+  }
+}
