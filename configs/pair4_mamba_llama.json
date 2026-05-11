@@ -1,0 +1,38 @@
+{
+  "pair_id": 4,
+  "evidence_level": "E3",
+  "description": "Mamba-130m (SSM) draft -> Llama2-7B target. PROXY PROJECTION - large vocabulary mismatch AND not yet executed. Requires 16GB T4.",
+  "draft_model": "state-spaces/mamba-130m-hf",
+  "target_model": "meta-llama/Llama-2-7b-hf",
+  "draft_params_M": 130,
+  "target_params_B": 7.0,
+  "architecture": "SSM->Transformer",
+  "vocabulary": {
+    "draft_vocab_size": 50280,
+    "target_vocab_size": 32000,
+    "match": "proxy",
+    "mismatch_tokens": 18280,
+    "treatment": "truncate_draft_logits_to_32000",
+    "theorem1_applies": false,
+    "note": "Large mismatch - significant approximation error expected"
+  },
+  "hardware": {
+    "device": "cuda",
+    "gpu": "Tesla T4 (Google Colab)",
+    "vram_gb": 16,
+    "vram_required_gb": 7.5
+  },
+  "projected_results": {
+    "beta_estimated": 0.048,
+    "alpha_estimated": 0.55,
+    "theoretical_speedup": 2.1,
+    "note": "E3 projection. alpha lower than P2 due to SSM-Transformer distributional misalignment (consistent with P3 vs P1 gap of -0.048 in alpha)."
+  },
+  "dtype": "float16",
+  "quantization": {
+    "target_quantized": true,
+    "method": "int8",
+    "library": "bitsandbytes",
+    "version": "0.41.0"
+  }
+}

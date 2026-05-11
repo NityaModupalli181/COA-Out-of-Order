@@ -1,0 +1,58 @@
+{
+  "pair_id": 3,
+  "evidence_level": "E2",
+  "description": "Mamba-130m (SSM, 130M) draft -> GPT-2 XL (1.5B) target. PROXY EXPERIMENT - vocabulary mismatch. Theorem 1 does NOT apply.",
+  "draft_model": "state-spaces/mamba-130m-hf",
+  "target_model": "gpt2-xl",
+  "draft_params_M": 130,
+  "target_params_B": 1.5,
+  "architecture": "SSM->Transformer",
+  "vocabulary": {
+    "draft_vocab_size": 50280,
+    "target_vocab_size": 50257,
+    "match": "proxy",
+    "mismatch_tokens": 23,
+    "treatment": "truncate_draft_logits_to_50257",
+    "theorem1_applies": false,
+    "note": "Logit truncation by token ID is an engineering proxy, not semantic alignment. Measures beta stability and O(1) decode, not distribution preservation."
+  },
+  "hardware": {
+    "device": "cuda",
+    "gpu": "GTX 1650",
+    "vram_gb": 4.3,
+    "vram_required_gb": 3.5
+  },
+  "benchmark": {
+    "sequence_lengths": [50, 100, 200],
+    "speculation_depths": [4],
+    "prompts": {
+      "factual": "The first digits of pi are",
+      "creative": "Once upon a time in a land far away",
+      "structured": "def fibonacci(n):"
+    },
+    "num_trials": 3,
+    "beta_warmup_passes": 2,
+    "beta_total_passes": 10,
+    "seed": 42
+  },
+  "expected_results": {
+    "beta_mean": 0.099,
+    "beta_std": 0.002,
+    "beta_n50": 0.102,
+    "beta_n100": 0.099,
+    "beta_n200": 0.097,
+    "beta_constant": true,
+    "o1_decode_confirmed": true,
+    "alpha_k4": 0.285,
+    "note": "Constant beta across n confirms O(1) recurrent-state decode property of Mamba SSM"
+  },
+  "mamba_specific": {
+    "use_cache_params": true,
+    "requires_cache_position": true,
+    "decode_type": "recurrent",
+    "complexity": "O(1) per token",
+    "state_size_fixed": true
+  },
+  "dtype": "float32",
+  "quantization": null
+}

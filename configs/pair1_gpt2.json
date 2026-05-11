@@ -1,0 +1,47 @@
+{
+  "pair_id": 1,
+  "evidence_level": "E1",
+  "description": "GPT-2 Small (117M) draft -> GPT-2 XL (1.5B) target. Exact vocabulary match. Fully measured on GTX 1650.",
+  "draft_model": "gpt2",
+  "target_model": "gpt2-xl",
+  "draft_params_M": 117,
+  "target_params_B": 1.5,
+  "architecture": "Transformer->Transformer",
+  "vocabulary": {
+    "draft_vocab_size": 50257,
+    "target_vocab_size": 50257,
+    "match": "exact",
+    "theorem1_applies": true
+  },
+  "hardware": {
+    "device": "cuda",
+    "gpu": "GTX 1650",
+    "vram_gb": 4.3,
+    "vram_required_gb": 3.5
+  },
+  "benchmark": {
+    "sequence_lengths": [50, 100, 200],
+    "speculation_depths": [2, 3, 4, 5, 6, 8],
+    "prompts": {
+      "factual": "The first digits of pi are",
+      "creative": "Once upon a time in a land far away",
+      "structured": "def fibonacci(n):"
+    },
+    "num_trials": 3,
+    "beta_warmup_passes": 2,
+    "beta_total_passes": 10,
+    "seed": 42
+  },
+  "expected_results": {
+    "beta_mean": 0.064,
+    "beta_std": 0.002,
+    "alpha_k4_factual": 0.66,
+    "alpha_k4_creative": 0.58,
+    "alpha_k4_code": 0.72,
+    "target_only_tps_n100": 19.9,
+    "full_decoder_tps_n100": 1.6,
+    "theoretical_speedup_k4_alpha065": 2.01
+  },
+  "dtype": "float16",
+  "quantization": null
+}

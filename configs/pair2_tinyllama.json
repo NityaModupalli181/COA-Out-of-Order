@@ -1,0 +1,47 @@
+{
+  "pair_id": 2,
+  "evidence_level": "E3",
+  "description": "TinyLlama (1.1B) draft -> Llama2-7B (7B) target. Exact Llama tokenizer family. E3 PROJECTION ONLY - requires 16GB T4 GPU.",
+  "draft_model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+  "target_model": "meta-llama/Llama-2-7b-hf",
+  "draft_params_B": 1.1,
+  "target_params_B": 7.0,
+  "architecture": "Transformer->Transformer",
+  "vocabulary": {
+    "draft_vocab_size": 32000,
+    "target_vocab_size": 32000,
+    "match": "exact",
+    "theorem1_applies": true,
+    "note": "Both use Llama tokenizer - rigorous speculative decoding"
+  },
+  "hardware": {
+    "device": "cuda",
+    "gpu": "Tesla T4 (Google Colab)",
+    "vram_gb": 16,
+    "vram_required_gb": 9.8
+  },
+  "benchmark": {
+    "sequence_lengths": [50, 100, 200],
+    "speculation_depths": [4],
+    "prompts": {
+      "factual": "The first digits of pi are",
+      "creative": "Once upon a time in a land far away",
+      "structured": "def fibonacci(n):"
+    },
+    "num_trials": 3,
+    "seed": 42
+  },
+  "projected_results": {
+    "beta_estimated": 0.031,
+    "alpha_estimated": 0.72,
+    "theoretical_speedup": 2.8,
+    "note": "E3 projection via S=(1-alpha^(k+1))/((1-alpha)(k*beta+1)). NOT a measured result."
+  },
+  "dtype": "float16",
+  "quantization": {
+    "target_quantized": true,
+    "method": "int8",
+    "library": "bitsandbytes",
+    "version": "0.41.0"
+  }
+}
